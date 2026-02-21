@@ -14,15 +14,15 @@ env:
 jobs:
   test-valid-writeback:
     name: "valid-manifest-valid-key-writeback"
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     env:
       ACTION_SIGNATURE_VALID: >-
         4ea72551d2cb204d66a5f6cd64b1b47eb0f5307f17d0d8cf3a9bc4a55039cc0f69309750aad3e8bd8c70d96d5814a8cdfda03e3d6b2e964ddb71bf6ec719bd08
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Checkout Gluon
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: freifunk-gluon/gluon
           path: gluon-repo
@@ -51,15 +51,15 @@ jobs:
 
   test-valid-no-writeback:
     name: "valid-manifest-valid-key-no-writeback"
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     env:
       ACTION_SIGNATURE_VALID: >-
         4ea72551d2cb204d66a5f6cd64b1b47eb0f5307f17d0d8cf3a9bc4a55039cc0f69309750aad3e8bd8c70d96d5814a8cdfda03e3d6b2e964ddb71bf6ec719bd08
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Checkout Gluon
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: freifunk-gluon/gluon
           path: gluon-repo
@@ -88,15 +88,15 @@ jobs:
 
   test-invalid-writeback:
     name: "valid-manifest-invalid-key-writeback"
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     env:
       ACTION_SIGNATURE_VALID: >-
         4ea72551d2cb204d66a5f6cd64b1b47eb0f5307f17d0d8cf3a9bc4a55039cc0f69309750aad3e8bd8c70d96d5814a8cdfda03e3d6b2e964ddb71bf6ec719bd08
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Checkout Gluon
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: freifunk-gluon/gluon
           path: gluon-repo
