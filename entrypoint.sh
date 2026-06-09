@@ -2,8 +2,8 @@
 
 set -euxo pipefail
 
-WORKDIR="/gluon/workdir"
-GLUON_DIR="/gluon/gluon-repo"
+WORKDIR="/gluon-workdir"
+GLUON_DIR="/gluon-repo"
 
 SIGNING_KEY_PATH="$WORKDIR/signing.key"
 MANIFEST_PATH="$WORKDIR/signing.manifest"

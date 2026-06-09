@@ -40,8 +40,8 @@ runs:
     - run: |
         docker run --rm \
           --user "$(id -u):$(id -g)" \
-          --volume "${GITHUB_WORKSPACE}/${ACTION_GLUON_PATH}:/gluon/gluon-repo" \
-          --volume "${RUNNER_TEMP}/workdir:/gluon/workdir" \
+          --volume "${GITHUB_WORKSPACE}/${ACTION_GLUON_PATH}:/gluon-repo" \
+          --volume "${RUNNER_TEMP}/workdir:/gluon-workdir" \
           sdk
       env:
         ACTION_GLUON_PATH: ${{ inputs.gluon-path }}
